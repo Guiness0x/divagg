@@ -1,0 +1,4 @@
+ticker,shares,dividend,frequency
+SCHD,200,0.80,quarterly
+VTI,150,0.22,quarterly
+O,120,0.26,monthly

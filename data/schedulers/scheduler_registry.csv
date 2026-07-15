@@ -1,0 +1,4 @@
+scheduler_name,schedule_type,status,frequency,source
+spreadsheet_sync,daily,active,24h,spreadsheet_feed
+runtime_enrichment,hourly,active,1h,runtime_enrichment
+external_api_sync,disabled,planned,unset,external_api

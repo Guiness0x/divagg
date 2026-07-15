@@ -1,0 +1,16 @@
+[simulation]
+
+annual_contribution = 5000
+dividend_growth_rate = 0.05
+years = 10
+
+[exports]
+
+enable_txt_reports = true
+enable_csv_exports = true
+
+[engine]
+
+currency_symbol = "$"
+report_divider_length = 60
+active_portfolio = "high_yield"

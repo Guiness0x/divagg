@@ -1,0 +1,4 @@
+daemon_name,status,mode,purpose
+scheduler_daemon,planned,background,continuous scheduler orchestration
+sync_daemon,planned,background,continuous synchronization propagation
+audit_daemon,planned,background,continuous runtime auditing

@@ -1,0 +1,4 @@
+adapter_name,provider_type,status,cache_ready,notes
+runtime_adapter,local_runtime,active,yes,Internal runtime enrichment adapter
+spreadsheet_adapter,flatfile_sheet,planned,yes,Spreadsheet ingestion adapter
+api_adapter,remote_api,disabled,no,Reserved for future external API ingestion

@@ -1,0 +1,4 @@
+daemon_name,lifecycle_state,last_started,last_stopped,restart_policy,restart_count,last_restart
+scheduler_daemon,running,2026-05-19T01:22:01.311438+00:00,2026-05-19T01:13:01.102440+00:00,manual,1,2026-05-19T01:00:44.523170+00:00
+sync_daemon,running,2026-05-19T01:22:01.311438+00:00,2026-05-19T01:13:01.102440+00:00,manual,1,2026-05-19T01:00:44.523170+00:00
+audit_daemon,running,2026-05-19T01:22:01.311438+00:00,2026-05-19T01:13:01.102440+00:00,manual,1,2026-05-19T01:00:44.523170+00:00

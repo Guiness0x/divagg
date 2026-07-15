@@ -1,0 +1,8 @@
+ticker,name,sector,asset_type,payout_frequency
+JEPI,JPMorgan Equity Premium Income ETF,ETF,covered_call_etf,monthly
+SCHD,Schwab US Dividend Equity ETF,ETF,dividend_etf,quarterly
+O,Realty Income,Real Estate,reit,monthly
+MAIN,Main Street Capital,Finance,bdc,quarterly
+KO,Coca-Cola,Consumer Staples,equity,quarterly
+VTI,Vanguard Total Stock Market ETF,ETF,index_etf,quarterly
+MO,Altria Group,Consumer Staples,equity,quarterly

@@ -1,0 +1,6 @@
+ticker,shares,dividend,frequency
+JEPI,100,0.35,monthly
+SCHD,50,0.80,quarterly
+O,75,0.26,monthly
+MAIN,25,0.99,quarterly
+KO,55.0,0.51,quarterly

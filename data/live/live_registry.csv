@@ -1,0 +1,9 @@
+ticker,asset_type,company_name,sector,industry,dividend_yield,payout_frequency,dividend_rate,share_price,market_cap,expense_ratio,ex_dividend_date,last_updated,source
+SCHD,dividend_etf,Schwab U.S. Dividend Equity ETF,ETF,Dividend ETF,3.67,quarterly,0.00,81.42,62000000000,0.06,,2026-05-18T20:41:37.427796+00:00,runtime_enrichment
+VYM,dividend_etf,Vanguard High Dividend Yield ETF,ETF,Dividend ETF,2.89,quarterly,0.00,128.11,59000000000,0.06,,2026-05-18T20:41:37.427825+00:00,runtime_enrichment
+JEPI,income_fund,JPMorgan Equity Premium Income ETF,ETF,Covered Call Income,7.12,monthly,0.00,56.82,39000000000,0.35,,2026-05-18T20:41:37.427836+00:00,runtime_enrichment
+JEPQ,income_fund,JPMorgan Nasdaq Equity Premium Income ETF,ETF,Covered Call Income,8.01,monthly,0.00,49.77,21000000000,0.35,,2026-05-18T20:41:37.427843+00:00,runtime_enrichment
+O,reit,Realty Income Corporation,Real Estate,REIT,5.44,monthly,0.00,61.03,52000000000,0.00,,2026-05-18T20:41:37.427850+00:00,runtime_enrichment
+PLD,reit,Prologis Inc.,Real Estate,Industrial REIT,2.71,quarterly,0.00,112.88,104000000000,0.00,,2026-05-18T20:41:37.427856+00:00,runtime_enrichment
+DLR,reit,Digital Realty Trust,Real Estate,Data Center REIT,3.22,quarterly,0.00,145.67,48000000000,0.00,,2026-05-18T20:41:37.427862+00:00,runtime_enrichment
+KO,equity,Coca-Cola,Consumer Staples,Beverages,3.12,quarterly,0.00,68.14,294000000000,0.00,,2026-05-18T20:41:37.427868+00:00,runtime_enrichment

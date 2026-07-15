@@ -1,0 +1,175 @@
+# ============================================================
+# DIVAGG — Git Ignore Rules
+# ============================================================
+
+# ------------------------------------------------------------
+# Secrets and local environment configuration
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------------------------
+# Python-generated files and tooling caches
+# ------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# ------------------------------------------------------------
+# Python virtual environments
+# ------------------------------------------------------------
+
+.venv/
+venv/
+env/
+ENV/
+
+# ------------------------------------------------------------
+# Compiled and executable artifacts
+# ------------------------------------------------------------
+
+/divagg
+/engine/compute
+
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.exe
+
+# ------------------------------------------------------------
+# Local PostgreSQL storage
+# ------------------------------------------------------------
+
+runtime/postgres/
+data/postgres/
+
+*.pid
+*.pid.lock
+
+# ------------------------------------------------------------
+# Database dumps and generated backups
+# ------------------------------------------------------------
+
+backups/
+
+*.sql
+*.dump
+*.backup
+*.tar
+*.tar.gz
+*.tgz
+
+# ------------------------------------------------------------
+# Runtime logs and local state
+# ------------------------------------------------------------
+
+runtime/logs/
+logs/
+runtime/state/
+
+*.log
+
+# ------------------------------------------------------------
+# Generated reports and exports
+#
+# Authored Python files under runtime/reports/ remain tracked.
+# ------------------------------------------------------------
+
+runtime/reports/*.txt
+runtime/reports/*.csv
+runtime/reports/*.json
+runtime/reports/*.html
+runtime/reports/*.xml
+
+reports/
+exports/runtime/
+
+exports/*.csv
+exports/*.json
+exports/*.txt
+
+# ------------------------------------------------------------
+# Generated historical artifacts
+# ------------------------------------------------------------
+
+history_runtime/
+runtime_snapshots/
+snapshots/
+simulations/
+engine_seals/
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+
+tmp/
+temp/
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# Editor configuration and sessions
+# ------------------------------------------------------------
+
+.vscode/
+.idea/
+
+Session.vim
+Sessionx.vim
+*.vim.bak
+
+# ------------------------------------------------------------
+# Operating-system generated files
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ------------------------------------------------------------
+# Docker-local overrides
+# ------------------------------------------------------------
+
+compose.override.yml
+docker-compose.override.yml
+
+# ------------------------------------------------------------
+# Local shell and tool state
+# ------------------------------------------------------------
+
+.direnv/
+.envrc
+.history
+.fish_history
+
+# ------------------------------------------------------------
+# Build and package artifacts
+# ------------------------------------------------------------
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ------------------------------------------------------------
+# Local application caches
+# ------------------------------------------------------------
+
+.cache/
+.cache-*/

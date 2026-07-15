@@ -1,0 +1,9 @@
+ticker,dividend_yield,payout_frequency,share_price,source
+SCHD,3.67,quarterly,81.42,spreadsheet_feed
+VYM,2.89,quarterly,128.11,spreadsheet_feed
+JEPI,7.12,monthly,56.82,spreadsheet_feed
+JEPQ,8.01,monthly,49.77,spreadsheet_feed
+O,5.44,monthly,61.03,spreadsheet_feed
+PLD,2.71,quarterly,112.88,spreadsheet_feed
+DLR,3.22,quarterly,145.67,spreadsheet_feed
+KO,3.12,quarterly,68.14,spreadsheet_feed

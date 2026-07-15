@@ -1,0 +1,4 @@
+source_name,status,feed_type,last_sync,notes
+runtime_enrichment,active,local_simulated,,Bootstrap enrichment source
+external_api,disabled,remote_live,,Reserved for future live provider
+spreadsheet_feed,planned,flatfile_live,,Reserved for spreadsheet-based live feed
