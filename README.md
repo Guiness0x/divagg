@@ -16,35 +16,35 @@
 | Reconciliation Engine | ✅ Complete |
 | Historical Persistence | ✅ Complete |
 | Reporting Pipeline | ✅ Complete |
-| Live Dividend Provider | ⏸ Deferred (Provider Licensing) |
+| Live Dividend Provider | ⏸ Deferred — provider licensing limitation |
 
 ---
 
 # Purpose
 
-DIVAGG (Dividend Aggregation Engine) is a financial observation engine designed to collect, normalize, persist, reconcile, and report dividend-oriented portfolio information.
+DIVAGG is a financial observation engine designed to collect, normalize, persist, reconcile, and report dividend-oriented portfolio information.
 
 The project emphasizes operational reliability over market speculation.
 
-DIVAGG is intended to serve as an engineering platform for dividend portfolio observation rather than a brokerage, trading system, or investment advisor.
+DIVAGG is an engineering platform for dividend portfolio observation. It is not a brokerage, trading system, or investment advisor.
 
 ---
 
 # Design Philosophy
 
-Generation 1 was built around six operational principles.
+Generation 1 was built around six operational principles:
 
-```
+```text
 Observe
-        ↓
+   ↓
 Normalize
-        ↓
+   ↓
 Persist
-        ↓
+   ↓
 Reconcile
-        ↓
+   ↓
 Detect
-        ↓
+   ↓
 Report
 ```
 
@@ -54,7 +54,7 @@ Every subsystem inside DIVAGG supports one or more of these principles.
 
 # System Architecture
 
-```
+```text
                     DIVAGG
 
               External Providers
@@ -88,9 +88,7 @@ Every subsystem inside DIVAGG supports one or more of these principles.
 - Historical market quote persistence
 - Quote normalization
 - Timestamped observations
-- Provider abstraction layer
-
----
+- Provider-specific source tracking
 
 ## Dividend Observation
 
@@ -102,24 +100,21 @@ Implemented:
 - Historical persistence schema
 - Payment metadata structure
 - Ex-dividend support
-- Provider abstraction
+- Provider abstraction boundary
 
-Live dividend ingestion has been intentionally deferred until a provider with appropriate licensing becomes available.
-
----
+Live dividend ingestion is deferred until a provider with suitable access and licensing becomes available.
 
 ## Runtime Intelligence
 
-DIVAGG includes a complete operational runtime capable of:
+DIVAGG includes an operational runtime capable of:
 
 - Runtime cycle execution
 - Portfolio reconciliation
 - Severity classification
+- Anomaly detection
 - Runtime summaries
 - Historical runtime events
 - Scheduled execution
-
----
 
 ## Reporting
 
@@ -134,7 +129,7 @@ Generation 1 includes:
 
 # Runtime Workflow
 
-```
+```text
 External Provider
         │
         ▼
@@ -177,47 +172,55 @@ Reporting
 
 # Repository Layout
 
-```
-compose/
-config/
-containers/
-data/
-engine/
-runtime/
+```text
+compose/       Docker Compose topology
+config/        Engine configuration
+containers/    Container-specific Dockerfiles
+data/          Registries and demonstration datasets
+engine/        Core finance and runtime modules
+runtime/       Live ingestion, automation, telemetry, and reporting
 ```
 
 ---
 
 # Configuration
 
-Create a local environment file.
+Create a local environment file:
 
 ```bash
 cp .env.example .env
 ```
 
-Populate your own configuration.
+Populate your own configuration:
 
-```text
+```env
 POSTGRES_USER=divagg
 POSTGRES_PASSWORD=your_password
 POSTGRES_DB=divagg
-POSTGRES_PORT=5433
+POSTGRES_PORT=5432
 FINNHUB_API_KEY=your_finnhub_api_key
 ```
+
+The real `.env` file is excluded from Git.
 
 ---
 
 # Quick Start
 
-Start the platform.
+Start the platform:
 
 ```bash
 docker compose --env-file .env \
 -f compose/docker-compose.yml up -d
 ```
 
-Run a live market observation.
+Verify the containers:
+
+```bash
+docker ps
+```
+
+Run a live market observation:
 
 ```bash
 docker compose --env-file .env \
@@ -234,25 +237,22 @@ python /runtime/ingestion/ingest_finnhub_quotes.py
 ===================================
 DIVAGG FINNHUB MARKET OBSERVATION
 ===================================
-
 Ticker: SCHD
 Stored In PostgreSQL: YES
-
+===================================
 Ticker: JEPI
 Stored In PostgreSQL: YES
-
+===================================
 Ticker: O
 Stored In PostgreSQL: YES
-
+===================================
 Ticker: MAIN
 Stored In PostgreSQL: YES
-
+===================================
 ===================================
 DIVAGG MARKET INGESTION COMPLETE
-
 Stored Snapshots: 4
 Failed Snapshots: 0
-
 Status: SUCCESS
 ===================================
 ```
@@ -261,30 +261,31 @@ Status: SUCCESS
 
 # Current Scope
 
-DIVAGG is intentionally **not**:
+DIVAGG is intentionally not:
 
 - A brokerage platform
 - A trading application
 - A market prediction engine
 - An algorithmic trading system
 
-Its purpose is operational financial observation.
+Its purpose is operational financial observation centered on dividend-oriented portfolios.
 
 ---
 
 # Engineering Decisions
 
-Generation 1 intentionally emphasizes:
+Generation 1 emphasizes:
 
 - Runtime-first architecture
-- Terminal-native workflow
+- Terminal-native operation
 - PostgreSQL persistence
 - Historical observation
 - Dockerized deployment
 - Separation of market and dividend telemetry
-- Provider abstraction
+- Replaceable external providers
+- Explicit operational status reporting
 
-These decisions allow future data providers to be integrated without redesigning the engine.
+These decisions allow future providers to be integrated without redesigning the engine.
 
 ---
 
@@ -292,7 +293,7 @@ These decisions allow future data providers to be integrated without redesigning
 
 ## Generation 2
 
-Planned improvements include:
+Potential future work:
 
 - Live dividend provider integration
 - Multi-provider observation
@@ -304,7 +305,9 @@ Planned improvements include:
 
 # License
 
-This repository is provided as an engineering portfolio project and educational reference.
+This repository is presented as an engineering portfolio project and educational reference.
+
+No open-source license has been assigned.
 
 ---
 
@@ -312,4 +315,4 @@ This repository is provided as an engineering portfolio project and educational 
 
 **Joshua Hurtado**
 
-Designed and engineered as a terminal-first financial observation platform demonstrating systems engineering, runtime architecture, financial data processing, and operational automation.
+Designed and engineered as a terminal-first financial observation platform demonstrating systems architecture, runtime automation, financial data processing, persistence, and operational tooling.
